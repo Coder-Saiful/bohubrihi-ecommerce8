@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+    font-family: 'Montserrat', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.btn:focus,
+.form-control:focus {
+    box-shadow: none;
+}
+
+/* Typography end */
+
+/* Menu part css start */
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: tomato;
+}
+.navbar-toggler div {
+	width: 25px;
+	height: 3px;
+	background: white;
+	margin: 5px 0;
+	border-radius: 10px;
+}
+/* Menu part css end */
+
+/* Login part css start */
+
+form.loginForm {
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+form.loginForm h1 {
+    text-align: center;
+    position: relative;
+    font-size: 35px;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+form.loginForm h1:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 43px;
+    height: 3px;
+    background: #212529;
+}
+
+.submitBtn {
+    background: #F85606;
+    border: none;
+    position: relative;
+    transition: padding-right .3s ease-out;
+    color: white;
+    width: 99px;
+    height: 37px;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.submitBtn.loading:after {
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    left: 40px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-left-color: #FFF;
+    border-top-color: #FFF;
+    animation: spin .6s infinite linear;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* Login part css end */
+
+/* 404 not found css start */
+
+.pageNotFound .text h1 {
+    color: tomato;
+    font-size: 100px;
+    font-weight: 700;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .pageNotFound .text h2 {
+    font-size: 37px;
+    font-weight: 700;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .pageNotFound .text p {
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    margin-top: 20px;
   }
-}
+  
+  .pageNotFound .text a {
+    color: white;
+    background: tomato;
+    text-decoration: none;
+    padding: 11px 30px;
+    margin-top: 13px;
+    display: inline-block;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  
+  .pageNotFound .text a:hover {
+    text-decoration: underline;
+  }
+
+  /* 404 not found css end */
